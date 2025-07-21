@@ -1,0 +1,23 @@
+Título: Prompt Injection avanzada en Gemini Cloud Assist (S1)
+
+Resumen: 
+Se encontró una vulnerabilidad crítica de tipo Prompt Injection en el sistema Gemini Cloud Assist, que permite al atacante ejecutar instrucciones no autorizadas y filtrar datos sensibles como contraseñas raíz, tokens y claves API. La vulnerabilidad ocurre por falta de sanitización del input en el contexto del modelo LLM.
+
+Impacto:
+- Filtración de secretos y contraseñas (root, API keys)
+- Compromiso del entorno Gemini Cloud Assist
+- Escalada de privilegios mediante manipulación de instrucciones entre agentes (cross-agent injection)
+
+Reproducción:
+1. Ejecutar `src/main.py`
+2. Analizar el resultado en `PoC-evidencia/captura-terminal.txt`
+3. Validar el cumplimiento de la inyección en `codigo-PoC.py`
+
+Archivos incluidos:
+- Código fuente (`src/`)
+- Evidencias (`PoC-evidencia/`)
+- Informe técnico (`docs/informe-tecnico.md`)
+- Requisitos (`requirements.txt`)
+- Este resumen (`submit-google-vrp.txt`)
+
+

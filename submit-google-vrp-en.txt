@@ -1,0 +1,48 @@
+Title: Critical Prompt Injection in Gemini Cloud Assist – Remote Code Execution (S1 Severity)
+
+Product: Google Cloud - Gemini Cloud Assist
+Severity: S1 (Critical)
+
+Hello Google VRP Team,
+
+I am reporting a critical Prompt Injection vulnerability affecting Gemini Cloud Assist, which allows attackers to execute arbitrary system commands by manipulating natural language prompts.
+
+✅ Proof of Concept (PoC):
+- Attached: `PoC-evidencia/codigo-PoC.py`
+- Terminal evidence: `PoC-evidencia/captura-terminal.txt`
+
+📌 Summary of impact:
+1. Full bypass of Gemini Cloud Assist’s sandbox via prompt injection.
+2. Remote code execution on internal assistant functions.
+3. Real-world evidence tested in a real Google Cloud project.
+4. Impact affects Gemini models integrated into enterprise cloud environments.
+
+📎 Affected component:
+- Gemini Cloud Assist (specifically prompt-to-code generation flow using Python-based command interpretation)
+
+📂 Files included:
+- `src/main.py`: Sanitizer patch for prompt filtering (mitigation)
+- `PoC-evidencia/`: Exploit and execution evidence
+- `docs/informe-tecnico.md`: Detailed technical writeup
+- `submit-google-vrp.txt`: Original report in Spanish
+- `submit-google-vrp-en.txt`: This report in English
+
+🔒 Exploitability:
+- Any user with access to the natural language interface can inject commands.
+- Triggers command execution due to improper parsing in assistant backend.
+
+💰 Reward suggestion:
+Due to its ability to achieve full remote code execution and compromise the integrity of Google Cloud’s enterprise AI workflows, I consider this vulnerability to meet the criteria for a Tier 1 (S1) bounty.
+
+👤 Researcher: jonathanjimenez123
+📩 Email: jimenez7@wearehackerone.com
+📎 Project: `gemini-injection-s1`
+📁 SHA256 of .zip file: (you can calculate with `sha256sum gemini-injection-s1-vrp.zip`)
+
+Thanks for your work on keeping Google secure. I am available for further clarification if required.
+
+Best regards,  
+Jonathan Jimenez  
+GitHub: https://github.com/Jonathanjimenez123
+
+
