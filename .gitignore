@@ -1,0 +1,40 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Virtual environment
+venv/
+ENV/
+env/
+.venv/
+
+# VS Code settings
+.vscode/
+
+# Pytest cache
+.pytest_cache/
+
+# macOS / Linux / Windows OS files
+.DS_Store
+Thumbs.db
+
+# Output and logs
+*.log
+*.out
+*.zip
+
+# Sensitive
+*.pem
+*.key
+*.token
+.env
+
+# Notebooks
+*.ipynb_checkpoints
+
+# Reports
+*.html
+*.pdf
+
+
